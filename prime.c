@@ -2,12 +2,27 @@
 
 int main(void) {
 	// your code goes here
-	int i,a,b;
-	scanf("%d",&a);
-	scanf("%d",&b);
-	for(i=a;i<=b;i++)
+	int n,q=0,i=0,j=0,count=0;
+	scanf("%d",&n);
+	scanf("%d",&q);
+	j=n+1;
+	while(j<q)
 	{
-		if(i%2==0)
-		printf("%d",i);
+		count=0;
+		for(i=2;i<=j/2;i++)
+		{
+			if(j%i==0)
+			{
+				count=1;
+				break;
+			}
+		}
+		if(count==0)
+		{
+			printf("%d ",j);
+			
+		}
+		j++;
 	}
+	return 0;
 }
